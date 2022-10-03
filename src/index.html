@@ -6,21 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css/style.css">
     <title>Clima</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <main>
         <div>
             <h3>Confira o clima de uma cidade:</h3>
             <input type="text">
-            <button type="button">Search</button>
+            <button type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
         <div>
-            <h2>Cidade</h2>
+            <h2>
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="cidade">Cidade</span>
+                <img src="">
+            </h2>
             <h1><span id="temperatura">30</span>°C</h1>
-            <span>Nublado</span>
+            <div id="conteiner-descricao">
+                <span>Nublado</span>
+                <img src="">
+            </div>
             <div>
-                <span id="umidade">umidade</span>
-                <span id="vento">vento</span>
+                <div id="conteiner-umidade">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span id="umidade">10%</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-wind"></i>
+                    <span id="vento">10km/h</span>
+                </div>
             </div>
         </div>
     </main>
