@@ -10,25 +10,25 @@
 </head>
 <body>
     <main>
-        <div>
+        <header>
             <h3>Confira o clima de uma cidade:</h3>
-            <input type="text">
-            <button type="button">
+            <input type="text" id="input-cidade" placeholder="Digite uma cidade...">
+            <button type="button" id="btn-pesquisa">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-        </div>
-        <div>
+        </header>
+        <div id="conteiner-informacoes">
             <h2>
                 <i class="fa-solid fa-location-dot"></i>
                 <span id="cidade">Cidade</span>
-                <img src="https://countryflagsapi.com/png/br">
+                <img id="img-bandeira" src="https://countryflagsapi.com/png/br">
             </h2>
             <h1><span id="temperatura">30</span>°C</h1>
             <div id="conteiner-descricao">
                 <span>Nublado</span>
-                <img src="http://openweathermap.org/img/wn/02d.png">
+                <img id="img-clima" src="http://openweathermap.org/img/wn/02d.png">
             </div>
-            <div>
+            <div id="conteiner-umidade-vento">
                 <div id="conteiner-umidade">
                     <i class="fa-solid fa-droplet"></i>
                     <span id="umidade">10%</span>

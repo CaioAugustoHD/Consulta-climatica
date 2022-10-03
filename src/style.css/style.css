@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: rgb(144, 144, 233);
+    width: 360px;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+header h3{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+header input {
+    flex: 1;
+    font-size: 1em;
+    padding: 0 10px;
+    border-radius: 5px;
+    letter-spacing: 0.1px
+}
+
+header button {
+    min-width: 40px;
+    margin-left: 5px;
+    aspect-ratio: 1;
+    border-radius: 5px;
+
+}
+
+
+div#conteiner-informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img-bandeira{
+    width: 26px;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 3.2em;
+    padding: 0.1em;
+}
+
+div#conteiner-descricao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+div#conteiner-umidade-vento {
+    display: flex;
+}
+
+div#conteiner-umidade {
+    border-right: 2px solid black;
+    padding-right: 1em;
+    margin-right: 1em;
+}
+
+header input:focus {
+    outline: 2px solid black;
+}
+
+header button:focus {
+    outline: 2px solid black;
+}
