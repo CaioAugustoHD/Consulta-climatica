@@ -16,16 +16,33 @@ const URL_apiBandeira = 'https://countryflagsapi.com/png/';
 const apiKey = 'c0248e94dec6f66826cb62438335f605';
 
 
-function pesquisar() {
+async function pesquisar() {
 
     let cidade = inputCidade.value;
-    getDadosApi(cidade);
+
+    // RECEBE RETORNO DA FUNÇÃO getDadosApi
+    let dados = await getDadosApi(cidade);
+    updateElements(dados);
+    console.log(dados);
 }
 
 async function getDadosApi(cidade){
 
     let URLgetDados = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&appid=${apiKey}&lang=pt_br`;
-    let getDadosFetch = await fetch(URLgetDados);
-    let getDados = getDadosFetch.json();
-    console.log(getDados);
+
+    // FAZ A CONSULTA NA API E RETORNA
+    let dados = await fetch(URLgetDados);
+    return dados.json();
+    
+}
+
+function updateElements(dados){
+
+    nomeCidade.innerHTML = dados.name;
+
+    temperatura.innerHTML = dados.main.temp;
+    descricao.innerHTML = dados.weather[0].description;
+    imgClima.setAttribute('src', `http://openweathermap.org/img/wn/${dados.weather[0].icon}.png`)
+    umidade.innerHTML = dados.main.humidity + '%';
+    vento.innerHTML = dados.wind.speed + 'km/h';
 }
