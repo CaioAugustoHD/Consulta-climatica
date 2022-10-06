@@ -2,6 +2,9 @@ const inputCidade = document.getElementById('input-cidade');
 const botao = document.getElementById('btn-pesquisa');
 botao.addEventListener('click', pesquisar);
 
+const cabecalho = document.querySelector('header');
+const conteinerInformacoes = document.getElementById('conteiner-informacoes');
+
 const nomeCidade = document.getElementById('nomeCidade');
 const bandeira = document.getElementById('img-bandeira');
 
@@ -23,7 +26,8 @@ async function pesquisar() {
     // RECEBE RETORNO DA FUNÇÃO getDadosApi
     let dados = await getDadosApi(cidade);
     updateElements(dados);
-    console.log(dados);
+    conteinerInformacoes.style.display = 'flex';
+    cabecalho.style.marginBottom = '2em';
 }
 
 async function getDadosApi(cidade){

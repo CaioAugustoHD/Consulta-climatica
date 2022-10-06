@@ -24,7 +24,7 @@ main{
 header{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
 }
 
 header h3{
@@ -51,7 +51,7 @@ header button {
 
 
 div#conteiner-informacoes {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
 }
