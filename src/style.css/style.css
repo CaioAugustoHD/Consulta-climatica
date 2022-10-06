@@ -12,6 +12,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(186, 186, 247);
+    background-image: url(../assets/bg.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 main{
