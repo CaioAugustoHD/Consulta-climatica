@@ -44,7 +44,7 @@ function updateElements(dados){
 
     nomeCidade.innerHTML = dados.name;
     bandeira.setAttribute('src', URL_apiBandeira + dados.sys.country);
-    temperatura.innerHTML = dados.main.temp;
+    temperatura.innerHTML = Math.round(dados.main.temp);
     descricao.innerHTML = dados.weather[0].description;
     imgClima.setAttribute('src', `http://openweathermap.org/img/wn/${dados.weather[0].icon}.png`)
     umidade.innerHTML = dados.main.humidity + '%';
