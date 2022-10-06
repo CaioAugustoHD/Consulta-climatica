@@ -91,3 +91,12 @@ header input:focus {
 header button:focus {
     outline: 2px solid black;
 }
+
+div#conteiner-erro {
+    text-align: center;
+    display: none;
+}
+
+p#msg-erro {
+    font-weight: bold;
+}
