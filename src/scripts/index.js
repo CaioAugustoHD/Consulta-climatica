@@ -24,8 +24,12 @@ function pesquisar() {
 
     let cidade = inputCidade.value;
 
-    // ENVIA A CIDADE PESQUISADA PARA A BUSCA NA API
-    getDadosApi(cidade);    
+    // VERIFICAR SE O INPUT NÃO ESTÁ VAZIO
+    if(cidade.length != 0){
+        getDadosApi(cidade);
+    } else {
+        inputCidade.focus();
+    }  
 }
 
 // BUSCAR DADOS NA API
