@@ -4,6 +4,7 @@ botao.addEventListener('click', pesquisar);
 
 const cabecalho = document.querySelector('header');
 const conteinerInformacoes = document.getElementById('conteiner-informacoes');
+const conteinerErro = document.getElementById('conteiner-erro');
 
 const nomeCidade = document.getElementById('nomeCidade');
 const bandeira = document.getElementById('img-bandeira');
@@ -19,27 +20,42 @@ const URL_apiBandeira = 'https://countryflagsapi.com/png/';
 const apiKey = 'c0248e94dec6f66826cb62438335f605';
 
 
-async function pesquisar() {
+function pesquisar() {
 
     let cidade = inputCidade.value;
 
-    // RECEBE RETORNO DA FUNÇÃO getDadosApi
-    let dados = await getDadosApi(cidade);
-    updateElements(dados);
-    conteinerInformacoes.style.display = 'flex';
-    cabecalho.style.marginBottom = '2em';
+    // ENVIA A CIDADE PESQUISADA PARA A BUSCA NA API
+    getDadosApi(cidade);    
 }
 
+// BUSCAR DADOS NA API
 async function getDadosApi(cidade){
 
     let URLgetDados = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&appid=${apiKey}&lang=pt_br`;
 
     // FAZ A CONSULTA NA API E RETORNA
-    let dados = await fetch(URLgetDados);
-    return dados.json();
-    
+    fetch(URLgetDados)
+        .then(response => response.json())
+        .then((dados) => cidadeEncontrada(dados))
+        .catch(() => cidadeNaoEncontrada())    
 }
 
+// CASO A CIDADE SEJA ENCONTRADA NA API
+function cidadeEncontrada(dados){
+    updateElements(dados);
+    conteinerInformacoes.style.display = 'flex';
+    conteinerErro.style.display = 'none';
+    cabecalho.style.marginBottom = '2em';
+}
+
+// EXIBIR MENSAGEM DE ERRO
+function cidadeNaoEncontrada(){
+    conteinerInformacoes.style.display = 'none';
+    conteinerErro.style.display = 'block';
+    cabecalho.style.marginBottom = '2em';
+}
+
+// ATUALIZAR ELEMENTOS VISUAIS NA PÁGINA
 function updateElements(dados){
 
     nomeCidade.innerHTML = dados.name;
