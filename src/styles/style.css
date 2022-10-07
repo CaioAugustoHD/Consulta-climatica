@@ -36,7 +36,7 @@ header{
 header p{
     text-align: center;
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 1.3em;
     font-size: 1.1em;
 }
 
@@ -136,4 +136,41 @@ span, p, h1, h3 {
     main{
         padding: 2em 1em;
     }
+}
+
+@media (min-width: 718px){
+    main {
+        width: 400px;
+        padding: 3em 2em;
+    }
+
+    header p {
+        font-size: 1.2em;
+        margin-bottom: 1.7em;
+    }
+
+    header input {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    #img-bandeira{
+        width: 30px;
+    }
+
+    h1 {
+        font-size: 3.9em;
+    }
+
+    #descricao, #umidade, #vento {
+        font-size: 1.1em;
+    }
+
+    #msg-erro {
+        font-size: 1.2em;
+    }
+
 }
