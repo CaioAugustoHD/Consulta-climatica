@@ -22,8 +22,10 @@ body {
 main{
     background-color: #1a1616c6;
     width: 360px;
+    min-width: 265px;
     padding: 2em;
     border-radius: 5px;
+    margin: 0 3px;
 }
 
 header{
@@ -39,7 +41,7 @@ header p{
 }
 
 header input {
-    flex: 1;
+    width: calc(100% - 45px);
     font-size: 1em;
     padding: 0 10px;
     border-radius: 5px;
@@ -128,4 +130,10 @@ p#msg-erro {
 
 span, p, h1, h3 {
     color: #E4EFFA;
+}
+
+@media (max-width: 348px){
+    main{
+        padding: 2em 1em;
+    }
 }
