@@ -79,6 +79,10 @@ h2 {
     margin-bottom: 0.5em;
 }
 
+h2 i {
+    color: rgba(239, 56, 56, 0.859);
+}
+
 h1 {
     font-size: 3.2em;
     padding: 0.1em;
@@ -100,6 +104,10 @@ div#conteiner-umidade {
     margin-right: 1em;
 }
 
+div#conteiner-umidade-vento div i {
+    color: #84c0fcae;
+}
+
 header input:focus {
     outline: 2px solid black;
 }
@@ -118,6 +126,6 @@ p#msg-erro {
     letter-spacing: 1px;
 }
 
-span, p, i, h1, h3 {
+span, p, h1, h3 {
     color: #E4EFFA;
 }
