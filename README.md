@@ -19,6 +19,8 @@
 
 ## Sobre
 Esse projeto foi criado com o objetivo de aprender a consumir os dados de uma API. Consiste em uma aplicação capaz de consultar o clima em tempo real de determinada cidade, estado ou país que o usuário pesquisar.
+<p>A ideia veio de um vídeo do canal do Matheus Battisti.</p>
+<a href="https://www.youtube.com/watch?v=VS8EBgPwsSU">Link para o vídeo</a>
 
 
 ## Funcionalidades
@@ -45,14 +47,20 @@ As principais funcionalidades do projeto são:
 
 
 ## Imagens
-**<p align="center">Imagens disponibilizadas em breve</p>**
-<img src="" alt="">
+**<p align="center">Tela inicial para fazer a pesquisa:</p>**
+<div align="center">
+  <img src="img/img1.png" alt="Tela inicial">
+</div>
 
-**<p align="center"></p>**
-<img src="" alt="">
+**<p align="center">Tela com a exibição da busca com as informações do clima:</p>**
+<div align="center">
+  <img src="img/img2.png" alt="Resultados da busca">
+</div>
 
-**<p align="center"></p>**
-<img src="" alt="">
+**<p align="center">Mensagem de erro caso o local não seja encontrado:</p>**
+<div align="center">
+  <img src="img/imgerror.png" alt="mensagme de erro">
+</div>
 
 
 
